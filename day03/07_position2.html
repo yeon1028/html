@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outter1{
+            width: 500px;
+            height: 150px;
+            background-color: beige;
+            position: relative;
+        }
+        .in-box1{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            top: 25px;
+            left: 25px;
+            position: absolute;
+        }
+        .in-box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(95, 160, 133);
+            top: 25px;
+            left: 50%; /* 절반의 중심 앞쪽 */
+            /* transform : tranlste (x축, y축)*/
+            transform: translate(-50%);
+            position: absolute;
+        }
+        .in-box3{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(97, 160, 95);
+            top: 25px;
+            right: 25px;
+            position: absolute;
+        }
+        /* 마진 상쇄 효과 (margin collapsing) 
+            - 부모 요소에 padding-top, border-top을 추가하면 부모와 자식 요소가 분리되어 마진이 들어감.
+            - 부모 요소에 overflow:hidden 추가하면 마진상쇄효과 방지가능
+        */
+        .outter2{
+            width: 300px;
+            height: 300px;
+            background-color: lightsteelblue;
+            /* block 속성 태그일 경우 */
+            /* margin: 0 auto; 
+            overflow: hidden; */
+            position: relative;
+        }
+        .inner2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(236, 236, 236);
+            /* margin: 100px auto 0; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="outter1">
+        <div class="in-box1"></div>
+        <div class="in-box2"></div>
+        <div class="in-box3"></div>
+    </div>
+    <div class="outter2">
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

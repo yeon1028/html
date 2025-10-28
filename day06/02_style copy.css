@@ -1,0 +1,90 @@
+@import url(../day05/reset.css);
+@font-face {
+    font-family: NotoSansKR-VariableFont;
+    src: url(../font/NotoSansKR-VariableFont_wght.ttf);
+}
+body{
+    font-family: NotoSansKR-VariableFont;
+    color: black;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    background-color: white;
+}
+.inner{
+    width: 1360px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.menu, .top-left ul, .top-right ul {
+    display: flex;
+    gap: 15px;
+    padding:10px;
+}
+.top-left ul li a, .top-right ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #121212;
+}
+.menu-img img, .menu-box ul {
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+}
+.menu-box ul li a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #121212;
+}
+
+.info-container{
+    background-color: azure;
+    margin: 0 auto;
+}
+.info-box{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #dbdbdb;
+    align-items: center;
+}
+.info-box img{
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+.text-box p{
+    margin: 5px 0;
+}
+.text-box p strong{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.text-box p a {
+  color: #949494;  
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* inner : 1360px */
+.wrap{
+    min-width:  1400px;
+}
+.hr{
+    border: 1px #dbdbdb;  
+}
+
+.con2>.inner {
+  display: flex;
+  background-image: url(../image/민속박물관/main_deco_bg_01_mo-CoAt3Q3l.jpg);
+  width: 100%;
+}
+
+.con2 img {
+  width: 318px;
+  height: 400px;
+}
+
+/* header */

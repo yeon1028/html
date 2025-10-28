@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes moving {
+            0%{bottom: 0;}
+            25%{bottom: 15px;}
+            50%{bottom: 0;}
+            75%{bottom: 30px;}
+            100%{bottom: 0;}
+        }
+        .box{
+            position: absolute;
+            bottom: 0;
+            animation: moving 0.8s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hihihi</div>
+</body>
+</html>

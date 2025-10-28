@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            border: 1px solid black;
+            width: 300px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        .inner, .inner3{
+            border: 2px solid black;
+            width: 90%;
+            height: 50px;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 45px;
+            margin: 10px auto;
+        }
+        .inner2{
+            border: 2px solid black;
+            width: 90%;
+            margin: 10px auto;
+            height: 270px;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            box-shadow: 3px 3px 5px rgb(190, 190, 190);
+            position: absolute;
+        }
+        .box1{
+            background-color: rgb(228, 75, 75);
+            top: 40px;
+            left: 40px;
+            z-index: 100;
+        }
+        .box2{
+            background-color: rgb(73, 180, 73);
+            top: 80px;
+            left: 80px;
+            z-index: 10;
+        }
+        .box3{
+            background-color: rgb(62, 96, 209);
+            top: 120px;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="outer">
+        <div class="inner">텍스트</div>
+        <div class="inner2">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <div class="inner3">텍스트</div>
+    </div>
+
+</body>
+</html>

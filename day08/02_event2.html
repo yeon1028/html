@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World~!!</h1>
+    <!-- 
+    getElementsByTagName : 배열로 들어옴
+    getElementsByClassName : 배열로 들어옴
+    document.getElementsByTagName('h1')[0]
+    -->
+
+    <script>
+        // alert 창 : 안내문을 띄워주는 창 => 확인버튼
+        // confirm 창 : 확인(true) / 취소(false)
+        // prompt : 값을 입력받을 수 있는 input이 있음 => alert + input
+
+        // alert("hello");
+        // let con = confirm("pass?");
+        // console.log(con);
+        console.log(document.getElementsByTagName('h1')[0].innerText);
+
+        let pro = prompt("이름을 입력해주세요");
+        console.log(pro);
+        document.getElementsByTagName('h1').innerText = pro;
+    </script>
+</body>
+</html>

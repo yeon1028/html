@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+     <!--
+        width : 100% (부모의) 화면의 전체 가로
+        height : 100% (부모의) 
+        vh / vw : 모니터(브라우저) 기준 높이
+     -->
+    <style>
+        @import url(reset.css);
+        .container{
+            width: 100%;
+            height: 100vh; /* 화면의 전체 */
+            background: linear-gradient(rgba(202, 202, 202, 0.164), rgba(83, 83, 83, 0.747)), url(../image/흑백인테리어.jpg);
+            background-size: cover;
+        }
+        .container>.navbar{
+            width: 90%;
+            margin: 0 auto;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container>.navbar>h1{
+            color: #e7e7e7;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .container>.navbar>ul{
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+        }
+        .container>.navbar>ul>li>a{
+            color: #e7e7e7;
+        }
+        .container>.main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .container>.main>h2{
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .container>.main button{
+            border: 2px solid #beb2a5;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: rgba(238, 235, 231, 0.788);
+            transition: 0.5s; /* hover시 서서히 바뀌기 */
+        }
+        .container>.main button:hover{
+            cursor: pointer;
+            background-color: #beb2a5;
+            color: #fffaf4c9;
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>DESIGN</h1>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">LOGIN</a></li>
+                <li><a href="">SIGNUP</a></li>
+                <li><a href="">BOARD</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h2>Welcome to Front-End World</h2>
+            <a href=""><button>Learn More</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

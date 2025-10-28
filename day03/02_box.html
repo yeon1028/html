@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        box-sizing : box의 크기를 지정하는 속성
+        width : 컨텐츠의 가로 길이
+        box-sizing에 따라 width 크기가 컨텐츠의 가로길이가 될 수도 있고,
+        박스 전체의 가로 길이가 될 수도 있음
+        - border-box : width = 컨텐츠의 가로 + 패딩(왼+오) + 테두리(왼+오)
+        - content-box : width = 컨텐츠의 가로
+        width=100px / padding=5px / border=1px
+        - border-box : 가로(88px) + 5 + 5 + 1 + 1 = 100px 
+        - content-box : 가로(100px) + 5 + 5 + 1 + 1 = 112px
+
+        margin : [top=bottom=left=right];
+        margin : [top=bottom][left=right];
+        margin : [top][left=right][bottom];
+        margin : [top][right][bottom][left]; (시계방향)
+    -->
+        <style>
+            @font-face {
+                font-family: NanumGothicExtraBold;
+                src: url(../font/NanumGothicExtraBold.ttf);
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                /* padding: 10px border: 1px */
+                padding: 10px;
+                border: 1px solid black;
+            }
+            .box1{
+                background-color: darkolivegreen;
+                box-sizing: border-box;
+            }
+            .box2{
+                background-color: rosybrown;
+                box-sizing: content-box;
+            }
+            .naver{
+                text-align: center;
+                width: 300px;
+                height: 28px;
+                margin: 10px 0;
+                padding: 17px 0;
+                background-color: #03a94d;
+                color: white;
+                border-radius: 4px;
+                font-family: NanumGothicExtraBold;
+                font-size: 25px;
+                font-weight: 900;
+            }
+            .naver:hover{
+                cursor: pointer;
+                background-color: #009b46;
+            }
+        </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+
+    <div class="naver">NAVER</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            border-bottom: none;
+            line-height: 45px;
+            font-weight: 600;
+        }
+        .end{
+            border-bottom: 1px solid black;
+        }
+        .menu:hover{
+            background-color: mistyrose;
+        }
+        .image{
+            float: right;
+            width: calc(100% - 210px);
+            height: 500px;
+            background-image: url(../image/강아지.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="menu">menu1</div>
+        <div class="menu">menu2</div>
+        <div class="menu">menu3</div>
+        <div class="menu end">menu4</div>
+    </div>
+    <div class="image"></div>
+</body>
+</html>

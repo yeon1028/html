@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text]{
+            background-color: beige;
+        }
+        input[type=password]{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        속성 선택자 : 태그 
+        input처럼 타입이 여러 종류인 값을 선택할 때
+        태그명[속성=값]
+    -->
+    <form action="">
+        <div>
+            <label for="id">User ID</label>
+            <input type="text" id="id" name="id" placeholder="8자이상" required>
+        </div>
+        <div>
+            <label for="pw">User PW</label>
+            <input type="password" id="pw" name="pw" placeholder="8자이상" required>
+        </div>
+        <div>
+            <label for="pin">User PIN</label>
+            <input type="password" id="pin" name="pin" placeholder="숫자만" required>
+        </div>
+        <div>
+            <button type="button">일반버튼</button>
+            <button type="submit">로그인</button>
+            <button type="reset">작성취소</button>
+        </div>
+    </form>
+</body>
+</html>

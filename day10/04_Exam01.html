@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        가위바위보 이미지를 버튼태그에 넣어 선택하여 가위바위보의 승률 계산
+    -->
+    <button onclick="play(0)"><img src="../image/math_img_1.jpg" alt=""></button>
+    <button onclick="play(1)"><img src="../image/math_img_2.jpg" alt=""></button>
+    <button onclick="play(2)"><img src="../image/math_img_3.jpg" alt=""></button>
+    <h3></h3>
+
+    <!-- 
+        player: 가위 / com: 바위 -> player가 졌습니다.
+        <현재 전적>
+        승: 9 / 무: 6 / 패: 7
+        승률 : 56.25%
+    -->
+
+    <script>
+        // 전역변수 결과변수
+        let win = 0;
+        let draw = 0;
+        let lose = 0;
+
+        function play(player){
+            console.log(player);
+
+            let com = randomNumber();
+            let result = getWinner(player, com);
+            console.log(result);
+
+            // 결과 출력 \n = enter
+            let str = `player:${playStr}`
+            str += `player ${result}\n`;
+            str += `현재 전적 \n`;
+            str += `player ${result}\n`;
+            str += `승률: ${getWinRate().toFixed(2)}\n`;
+
+        }
+
+        // 승률을 계산하는 함수
+        function getWinRate(){
+            return resultCount.win != 0 ? (resultCount.win / 
+                (resultCount.win+resultCount.draw+resultCount.lose)-resultCount.draw)*100 : 0;
+        }
+
+        // 랜덤 값을 리턴하는 함수
+        function randomNumber(){
+            return 
+        }
+    </script>
+</body>
+</html>

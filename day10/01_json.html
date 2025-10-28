@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        데이터 구조화 => 구조화된 텍스트 => JSON
+    </h1>
+    <!-- 
+    [ JSON(JavaScript Object Notation) ]    
+      - 많은 양의 데이터가 실시간으로 전달되어야 할 때 가장 효율적으로 데이터를 보내는 방법
+      - javascript 객체를 구조화된 데이터로 표현하기 위한 문자 기반 표준 포멧
+      - 웹 서버 <-> 화면 데이터를 전송할 때 일반적으로 사용
+      - 자바스크립트의 객체 형태를 띄기 때문에 구조 파악이 쉽고, 제작도 쉽다.
+      - 모든 웹분야에서 화면은 자바스크립트가 모든 프론트에서 호환된다는 점을 활용
+      - 데이터 수집, 출력하는 용도로 거의 모든 플랫폼에서 사용되고 있음
+
+      - object -> string : 원하는 서버로 전송
+      - string -> 각자의 원하는 객체로 변환 (json 라이브러리를 사용)
+
+      - 자바스크립트에서는 JSON 객체를 텍스트로 바꾸고, 다시 object로 변경하는 명령어가 있음
+        JSON.stringify(object) => string 변경
+        JSON.parse(string)
+
+    -->
+
+    <script>
+        const top1={
+            '거래상위':[
+                {
+                    name:'KODEX 200선물인버스2X',
+                    price:763,
+                    updown:23,
+                    ratio:3.24
+                },
+                {
+                    name:'KODEX 2차전지산업레버리지',
+                    price:1948,
+                    updown:-6,
+                    ratio:-0.31
+
+                },
+                {
+                    name:'KODEX 인버스',
+                    price:2684,
+                    updown:47,
+                    ratio:1.78
+                },
+                {
+                    name:'우리기술',
+                    price:4645,
+                    updown:65,
+                    ratio:1.42
+                },
+                {
+                    name:'텔콘RF제약',
+                    price:1251,
+                    updown:227,
+                    ratio:22.17
+                }],
+            '상승': [
+                {
+                    name:'삼익제약',
+                    price:12630,
+                    updown:2910,
+                    ratio:29.94
+                }],
+            '하락': [
+                {
+                    name:'한화',
+                    price:99300,
+                    updown:-7900,
+                    ratio:-7.09
+                }],
+            '시가총액상위': [
+                {
+                    name:'삼성전자',
+                    price:99250,
+                    updown:-2750,
+                    ratio:-2.65
+                }]
+        };
+
+        console.log(top1);
+        let topString = JSON.stringify(top1);
+        console.log(typeof topString);
+
+        let topObject = JSON.parse(topString);
+        console.log(topObject);
+
+
+        // 환전고시환율
+        const money = {
+            exchange : [
+                {
+                    name: '미국USD',
+                    price: 1434.20,
+                    updown:0.70
+                },
+                {
+                    name: '일본JPY',
+                    price: 941.20,
+                    updown:3.11
+                },
+                {
+                    name: '유럽연합EUR',
+                    price: 1672.49,
+                    updown:2.89
+                },
+                {
+                    name: '중국CNY',
+                    price: 201.96,
+                    updown:0.30
+                }
+            ],
+            gold : [
+                {
+                    name: '국제금(10.27)',
+                    price: 4019.70,
+                    updown:-118.10
+                },
+                {
+                    name: '국내금(10.28)',
+                    price: 184841.32,
+                    updown:604.18
+                }
+            ]
+        };
+    </script>
+</body>
+</html>

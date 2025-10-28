@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        * 색상 관련 속성
+        - color : 글자색
+        - background-color : 배경색
+        - border-color : 테두리색
+
+        * 색상 지정 방법
+        - 이미 지정된 이름을 사용하는 방법 : red, yellow 등...
+        - 색상 코드를 이용하는 방법 : 16진수 색상코드
+        - 색상 팔레트를 이용하는 방법
+            - rgb(0,0,0) 코드를 이용하는 방법
+            - rgba(0,0,0,) : a는 투명도를 나타냄 0~1 0.5는 반투명
+        - 그라디언트 : 여러 색상의 조합 (https://cssgradient.io/)
+        - background-color : liner-gradient(방향, 색상1, 색상2);
+    -->
+        <style>
+            div{
+                width: 300px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+            }
+            .color{
+                color: yellowgreen;
+            }
+            .bg-color{
+                color: blueviolet;
+                background-color: whitesmoke;
+            }
+            .b-color{
+                border: 1px solid thistle; /* 두께, 모양, 색을 한번에 */
+                
+                /* border: 1px;  두께
+                border-style: solid; 모양 
+                border-color: thistle; 색 */
+            }
+            .box{
+                color: white;
+                background-color: rgba(161, 199, 164, 0.877);
+                border: 2px solid rgb(119, 91, 54);
+            }
+        </style>
+</head>
+<body>
+    <div class="color">글자색</div>
+    <div class="bg-color">배경색</div>
+    <div class="b-color">테두리색</div>
+    <div class="box">test</div>
+
+</body>
+</html>
