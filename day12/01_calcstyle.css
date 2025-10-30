@@ -1,0 +1,53 @@
+#printResult {
+        background-color: #f7f0ef;
+            color: #121212;
+            font-size: 25px;
+            text-align: right;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #121212;
+        }
+        .container {
+            background-color: #ffdcdc;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 320px;
+            max-width: 90vw;
+        }
+        .area {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .area button {
+            background-color: #f0ebe8;
+            color: #121212;
+            border: none;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease; /* 호버 효과 부드럽게 */
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+        }
+        .area button:hover {
+            background-color: #fcc2cc;
+            transform: translateY(-2px);
+        }
+        .area button.clear {
+            grid-column: span 4;
+            background-color: #f7ede0d2;
+            color: #121212;
+        }
