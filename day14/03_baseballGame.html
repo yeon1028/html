@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="startBtn"> 게임시작 </button>
+    <button id="resetBtn"> 다시시작 </button>
+    <h1 id="comMsg">게임 시작 버튼을 눌러주세요</h1>
+    <div class="input">
+        숫자입력 : <input type="text" id="myNum">
+        <button id="submit">제출</button>
+    </div>
+    <ol id="tries"></ol>
+
+    <script>
+        /* 
+            1. 게임시작 전 입력 금지
+            2. 중복값 안됨 (111 => 유효하지 않은 숫자입니다)
+            3. 반드시 3자리
+            4. 문자 x
+        */
+       // comNum 배열과 사용자 value 값의 배열 비교
+       // 값 위치가 동일하면 strike, 값만 동일하면 ball, 일치하는 값이 없다면 out
+
+        const resetBtn = document.getElementById('resetBtn');
+        const comMsg = document.getElementById('comMsg');
+        const myNum = document.getElementById('myNum');
+        const tries = document.getElementById('tries');
+        const submit = document.getElementById('submit');
+        
+        const comNum = [];
+
+        document.getElementById('startBtn').addEventListener('click', ()=>{
+            '컴퓨터가 랜덤숫자를 생성했습니다.'
+            
+            for(let i=0; i<3; i++){
+                const randomNumber = Math.floor(Math.random() * 10);
+                comNum.push(randomNumber);
+            }
+            console.log(comNum);
+        });
+
+    </script>
+</body>
+</html>

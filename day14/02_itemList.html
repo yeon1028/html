@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+        input[type="text"] {
+            padding: 12px 18px; 
+            border: 2px solid #28a745; 
+            border-radius: 8px;
+            margin-right: 15px; 
+            flex-grow: 1; 
+            outline: none;
+            transition: border-color 0.2s ease; 
+        }
+        #btn {
+            padding: 12px 25px;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #btn:hover {
+            background-color: #218838;
+        }
+        .container{
+            border: 2px solid black;
+            width: 80%;
+        }
+        #itemList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #itemList li {
+            background-color: #ffffff; 
+            margin-bottom: 12px; 
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2em;
+            color: #4a4a4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>여행 준비물 점검 목록</h1>
+    <form action="">
+        <input type="text" id="item">
+        <button type="button" id="btn">추가</button>
+    </form>
+    <div class="container">
+        <ul id="itemList"></ul>
+    </div>
+
+    <script>
+        /*
+        < todoList(CRUD) >
+        - C : create (생성) => item 생성 => 저장공간에 저장
+        - R : read (읽기) => item 배열을 읽어서 출력
+        - U : update (수정) => X
+        - D : delete (삭제) => item 배열에서 삭제
+        */
+
+        const item = document.getElementById('item');
+        const itemList = document.getElementById('itemList');
+        document.getElementById('btn').addEventListener('click', () => {
+        const newItem = item.value;
+        const listItem = document.createElement('li');
+
+        listItem.innerHTML = `
+            ${newItem}
+            <button class="cancle">❌</button>
+        `;
+
+        const deleteButton = listItem.querySelector('.cancle');
+        deleteButton.addEventListener('click', () => {
+            listItem.remove();
+        });
+
+        itemList.appendChild(listItem);
+        item.value = '';
+        });
+    </script> 
+
+</body>
+</html>
