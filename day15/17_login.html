@@ -37,6 +37,7 @@
             margin-bottom: 20px;
             background-color: #8a76b0;
             color: white;
+            padding: 10px;
         }
         .container .link>a{
             text-decoration: none;
@@ -77,24 +78,30 @@
         */
 
        const inputs = document.querySelectorAll('.box');
-       const btn = document.querySelector('btn');
+        const btn = document.querySelector('.btn');
 
-       // pw 정규식 : 영어, 숫자, 특수문자 1개씩을 포함한 8자 이상
-       const regExp = //;
+        // pw 정규식 : 영어, 숫자, 특수문자 1개씩을 포함한 8자 이상
+        const regExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
-       // 유효성 검사 함수 (id, pw)
-       function validateForm(){
-           const idValid = inputs[0].value.length >= 8;
-           const pwValid = regExp.test(inputs[1].value);
-           setBu
+        // 유효성 검사 함수 (id, pw)
+        function validateForm(){
+            const idVaild = inputs[0].value.length >= 8;
+            const pwVaild = regExp.test(inputs[1].value);
+            console.log(idVaild)
+            console.log(pwVaild);
+            setButtonState(idVaild && pwVaild);
+        }
 
-       }
+        // 버튼 상태
+        function setButtonState(isEnabled){
+            // 파라미터 값이 true => disabled = false
+            btn.disabled = !isEnabled;
+            btn.style.backgroundColor = 
+            isEnabled ? 'rgb(75, 28, 119)' : 'rgb(198, 185, 210)';
+        }
 
-       function setButtonState(isEnabled){
-        // 파라미터 값이 true => disabled = false
-        btn.disabled = !isEnabled;
-        btn.style.background
-       }
+        // 이벤트 등록
+        inputs.forEach(input => input.addEventListener('input',validateForm));
 
 
     </script>
