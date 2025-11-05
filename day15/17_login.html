@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(230, 236, 255, 0.595);
+        }
+        .container{
+            width: 300px;
+            background-color: #e7eaee;
+            box-shadow: 0 4px 8px #0000001a;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border-radius: 15px;
+            padding: 40px;
+        }
+        .container .box{
+            width: 80%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+        }
+        .btn{
+            width: 60%;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 20px;
+            background-color: #8a76b0;
+            color: white;
+        }
+        .container .link>a{
+            text-decoration: none;
+            color: #7f69a9;
+            font-size: 13px;
+            /* margin-top: 25px; */
+        }
+        .container .link>a:hover{
+            text-decoration: underline;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" class="box" name="id" placeholder="아이디">
+            <input type="password" class="box" name="pw" placeholder="비밀번호">
+            <input type="submit" class="btn" value="로그인" disabled>
+        </form>
+
+        <div class="link">
+            <a href="">비밀번호를 잊어버리셨나요</a>
+        </div>
+
+    </div>
+
+    <script>
+        // event input
+        /* 
+        - id : 8자 이상
+        - pw : 영어, 숫자, 특수문자 1개씩을 포함한 8자 이상
+        - 두 조건이 맞을 때만 버튼 disable 상태 해지
+        - 객체.disabled = true => 비활성화 상태
+        - 객체.disabled = false => 활성화 상태
+        - regExp 
+        */
+
+       const inputs = document.querySelectorAll('.box');
+       const btn = document.querySelector('btn');
+
+       // pw 정규식 : 영어, 숫자, 특수문자 1개씩을 포함한 8자 이상
+       const regExp = //;
+
+       // 유효성 검사 함수 (id, pw)
+       function validateForm(){
+           const idValid = inputs[0].value.length >= 8;
+           const pwValid = regExp.test(inputs[1].value);
+           setBu
+
+       }
+
+       function setButtonState(isEnabled){
+        // 파라미터 값이 true => disabled = false
+        btn.disabled = !isEnabled;
+        btn.style.background
+       }
+
+
+    </script>
+</body>
+</html>

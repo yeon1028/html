@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            width: 500px;
+            height: 50px;
+            border: 3px solid black;
+            margin: 10px auto 30px;
+        }
+        ul{
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+        ul>li{
+            display: inline;
+            margin: 10px 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        ul>li:hover{
+            cursor: pointer;
+            color: #de7fa7;
+        }
+        img{
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel ✈</h1>
+    <ul>
+        <li id="home">HOME</li>
+        <li id="seoul">Seoul</li>
+        <li id="paris">Paris</li>
+        <li id="london">London</li>
+    </ul>
+    <img src="../image/home.jpg" alt="imgTag" id="img">
+
+    <script>
+        const img = document.getElementById('img'); 
+
+        document.getElementById('home').onclick = ()=>{
+            img.src = '../image/home.jpg';
+        };
+        document.getElementById('seoul').onclick = ()=>{
+            img.src = '../image/seoul.jpg';
+        };
+        document.getElementById('paris').onclick = ()=>{
+            img.src = '../image/paris.jpg';
+        };
+        document.getElementById('london').onclick = ()=>{
+            img.src = '../image/london.jpg';
+        };
+    </script>
+</body>
+</html>
