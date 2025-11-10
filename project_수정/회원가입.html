@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body{
+            background-color:#fae10089;
+        }
+        .container{
+            width: 25%;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px 30px;
+            height: 600px;
+            display: flex; 
+            flex-direction: column;
+            box-shadow: 
+            0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
+        }
+        .container .box, .btn {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 8px;
+            outline: none;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .container .box{
+            height: 50px;
+        }
+        .btn{
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 30px;
+            background-color: #fae10089;
+            color: #121212;
+            border: none;
+        }
+        .btn:hover{
+            background-color: #c0d7e8be;
+            transform: translateY(-3px);
+            color: #121212;
+            cursor: pointer;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            margin-top: 15px;
+        }
+        .top a svg {
+            cursor: pointer;
+            fill: #333;
+            transition: fill 0.3s ease;
+        }
+        .top a:hover svg {
+            fill: #588cb4;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <a href="#" id="backBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </a>
+            <a href="#" id="backHome">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                </svg>
+            </a>
+        </div>
+        <form id="signupForm" action="login.html">
+            <input type="text" class="box" id="id" placeholder="아이디" required>
+            <div class="error-message" id="idError"></div>
+
+            <input type="password" class="box" id="pw" placeholder="비밀번호" required>
+            <div class="error-message" id="pwError"></div>
+
+            <input type="text" class="box" id="mail" placeholder="[선택] 이메일주소">
+            <input type="text" class="box" id="name" placeholder="이름" required>
+            <input type="text" class="box" id="birth" placeholder="생년월일" required>
+            <input type="text" class="box" id="phone" placeholder="휴대전화번호" required>
+        </form>
+        <form action="">
+            <input type="submit" class="btn" id="createId" value="회원가입">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('backBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = '로그인.html';
+        });
+        document.getElementById('backHome').addEventListener('click', function(event){
+            event.preventDefault();
+            window.location.href = 'main.html';
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const id = document.getElementById('id').value;
+            const pw = document.getElementById('pw').value;
+            const name = document.getElementById('name').value;
+            const birth = document.getElementById('birth').value;
+            const phone = document.getElementById('phone').value;
+        });
+
+    </script>
+</body>
+</html>

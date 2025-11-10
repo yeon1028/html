@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: title;
+            src: url(../project_Travel/Hahmlet-VariableFont_wght.ttf);
+        }
+        @font-face {
+            font-family: menu;
+            src: url(../project_Travel/NanumSquareNeo-Variable.ttf);
+        }
+        .menu-inner{
+            display: flex;
+            justify-content: space-between;
+            background-color: #fae100;
+        }
+        .menu-inner ul{
+            list-style: none;
+        }
+        .menu-inner ul li{
+            font-size: 20px;
+            display: inline-block;
+        }
+        .menu-inner ul li a{
+            color: #505050;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-weight: 550;
+            font-family: menu;
+        }
+        .menu-inner ul li a:hover{
+            color: white;
+        }
+        .con-box{
+            width: 1090px;
+            min-height: 670px;
+            background-color: beige;
+            padding: 20px;
+        }
+        .inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        .title{
+            border-bottom: 3px solid black;
+            font-family: title;
+            font-size: 27px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .title h2 {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-inner">
+            <div class="menu-left">
+                <ul>
+                    <li><a href="" id="homeBtn">홈</a></li>
+                    <li><a href="">여행추가</a></li>
+                    <li><a href="" id="viewing">여행 모아보기</a></li>
+    
+                </ul>
+            </div>
+            <div class="menu-right">
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="inner">
+        <div class="con-box">
+            <div class="title">
+                <h2>도담삼봉</h2>
+                <p>충북 단양군</p>
+                <h3>맑고 푸른 남한강 그 한가운데 솟은 세 봉우리</h3>
+            </div>
+            <div class="photo">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('homeBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'main.html'; // 메인 페이지 삽입
+    });
+    document.getElementById('viewing').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '후기목록.html';
+    });
+
+    </script>
+</body>
+</html>

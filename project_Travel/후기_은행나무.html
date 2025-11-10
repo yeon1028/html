@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @font-face {
+            font-family: title;
+            src: url(../project_Travel/Hahmlet-VariableFont_wght.ttf);
+        } */
+        @font-face {
+            font-family: menu;
+            src: url(../project_Travel/NanumSquareNeo-Variable.ttf);
+        }
+        .menu-inner{
+            display: flex;
+            justify-content: space-between;
+            background-color: #fae100;
+        }
+        .menu-inner ul{
+            list-style: none;
+        }
+        .menu-inner ul li{
+            font-size: 20px;
+            display: inline-block;
+        }
+        .menu-inner ul li a{
+            color: #505050;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-weight: 550;
+            font-family: menu;
+        }
+        .menu-inner ul li a:hover{
+            color: white;
+        }
+        .con-box{
+            width: 900px;
+            min-height: 670px;
+            /* background-color: beige; */
+            padding: 20px;
+            border-bottom: 2px solid black;
+        }
+        .inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        .inner .photo li{
+            list-style: none;
+        }
+        .photo ul li img {
+            width: 250px; 
+            height: 180px; 
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        .inner-text{
+            clear: both;
+            font-size: 15px;
+        }
+        .title{
+            border-bottom: 2px solid black;
+            font-family: menu;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        .title .info {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            font-size: 14px;
+        }
+        h4{
+            margin-top: 50px;
+        }
+        .comment{
+            border: 1px solid gray;
+            border-radius: 15px;
+            /* background-color: #fae100; */
+            min-height: 80px;
+        }
+        input[type="text"]{
+            border: none;
+            background-color:#ffffff00;
+            min-height: 80px;
+            border-radius: 15px;
+            width: 85%;
+            margin-right: 20px;
+        }
+        input[type="button"]{
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: #333333;
+            color: white;
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-inner">
+            <div class="menu-left">
+                <ul>
+                    <li><a href="" id="homeBtn">홈</a></li>
+                    <li><a href="">여행추가</a></li>
+                    <li><a href="" id="viewing">여행 모아보기</a></li>
+    
+                </ul>
+            </div>
+            <div class="menu-right">
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="inner">
+        <div class="con-box">
+            <div class="title">
+                <h2>홍천 은행나무숲 여행 후기</h2>
+                <div class="info">
+                    <span>작성자: 박채연</span>
+                    <span>작성일자: 2025-11-07</span>
+                </div>
+            </div>
+            <div class="photo">
+                <ul>
+                    <li>
+                        <img src="../project_Travel/이미지/홍천 은행나무숲.jpg" alt="">
+                        <img src="../project_Travel/이미지/홍천 은행나무숲.jpg" alt="">
+                        <img src="../project_Travel/이미지/홍천 은행나무숲.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="inner-text">
+                <p>해마다 10월이면 한 달 동안 일반에 개방되는 홍천 은행나무숲은, 한 개인이 30년 동안 정성껏 가꾼 숲이다.</p>
+                <p>홍천 지역 가을을 대표하는 명소로, 약 5m 간격으로 심어진 2,000여 그루의 은행나무가 장관을 이룬다.
+                    10월이면 노랗게 물든 은행잎이 황금빛 풍경을 만들어내며 많은 관광객의 발길을 끈다. 
+                    인근에는 홍천 9경 중 하나인 삼봉약수와 구룡령이 위치해 있어, 이 일대는 최고의 가을 여행지로 손꼽히고 있다.
+                </p>
+                <p>
+                    은행나무숲은 오대산 광천수인 삼봉약수의 효험을 듣고, 한 남편이 아내의 건강을 위해 1985년부터 한 그루 한 그루 직접 심으며 조성한 숲이다.
+                    처음 25년 동안은 일반에 공개되지 않았으나, 2010년부터 입소문을 타기 시작하면서 10월 한 달간 무료로 개방하고 있다. 
+                </p>
+                <p> 인근 관광지로는 가칠봉, 삼봉약수, 국립삼봉자연휴양림 등이 있어, 편안한 휴식을 위한 여행지로 들러볼 만한 곳이다. </p>
+            </div>
+            <h4>댓글</h4>
+            <div class="comment">
+                <input type="text" id="add-coment" placeholder="댓글을 입력해주세요.">
+                <input type="button" value="등록">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('homeBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'main.html'; // 메인 페이지 삽입
+    });
+    document.getElementById('viewing').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '후기목록.html';
+    });
+    </script>
+</body>
+</html>
